@@ -1,0 +1,33 @@
+function setup() {
+    terminateButton = document.getElementById("gwt-debug-action-terminate-instances")
+    if (terminateButton == null) {
+        return
+    }
+    terminateButton.onclick = function() {
+        console.log("You've been terminated")
+        url = chrome.extension.getURL('terminatedsound.mp3');
+        var audio = new Audio(url);
+        audio.play();
+    }
+}
+function interval(func, wait, times) {
+    var interv = function (w, t) {
+        return function () {
+            if (typeof t === "undefined" || t-- > 0) {
+                setTimeout(interv, w);
+                try {
+                    func.call(null);
+                }
+                catch (e) {
+                    t = 0;
+                    throw e.toString();
+                }
+            }
+        };
+    }(wait, times);
+
+    setTimeout(interv, wait);
+};
+interval(function () {
+    setup()
+}, 1000);

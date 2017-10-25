@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "AWS Terminator",
+    "description": "Play's a sound file whenever an AWS instance is terminated",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "terminate.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "terminatedsound.mp3"
+    ]
+}
