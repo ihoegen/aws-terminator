@@ -6,7 +6,7 @@ function setup() {
     if (terminateButton.innerHTML.indexOf("Yes, Terminate") == -1) {
         return
     }
-    terminateButton.onclick = function () {
+    terminateButton.onclick = function() {
         console.log("You've been terminated")
         url = chrome.extension.getURL('../res/terminatedsound.mp3');
         var audio = new Audio(url);
