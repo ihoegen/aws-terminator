@@ -6,6 +6,3 @@ Play the famous terminator clip every time you terminate an instance in AWS.
 
 Get it on the [Chrome Extension Store](https://chrome.google.com/webstore/detail/lhdkcacfakoeadhbklamiloapjgigjil/)
 
-## Like it?
-
-[Donate!](https://paypal.me/ihoegen/5)

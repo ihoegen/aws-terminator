@@ -1,6 +1,9 @@
 function setup() {
-    terminateButton = document.getElementById("gwt-debug-action-terminate-instances")
+    terminateButton = document.getElementById("gwt-debug-dialogBoxSubmitButton-button")
     if (terminateButton == null) {
+        return
+    }
+    if (terminateButton.innerHTML.indexOf("Yes, Terminate") == -1) {
         return
     }
     terminateButton.onclick = function() {
