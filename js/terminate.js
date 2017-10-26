@@ -1,9 +1,12 @@
 function setup() {
-    terminateButton = document.getElementById("gwt-debug-action-terminate-instances")
+    terminateButton = document.getElementById("gwt-debug-dialogBoxSubmitButton-button")
     if (terminateButton == null) {
         return
     }
-    terminateButton.onclick = function() {
+    if (terminateButton.innerHTML.indexOf("Yes, Terminate") == -1) {
+        return
+    }
+    terminateButton.onclick = function () {
         console.log("You've been terminated")
         url = chrome.extension.getURL('../res/terminatedsound.mp3');
         var audio = new Audio(url);
