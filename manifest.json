@@ -6,14 +6,14 @@
     "content_scripts": [
         {
             "matches": [
-                "https://*/*"
+                "https://*.aws.amazon.com/*"
             ],
             "js": [
-                "terminate.js"
+                "js/terminate.js"
             ]
         }
     ],
     "web_accessible_resources": [
-        "terminatedsound.mp3"
+        "res/terminatedsound.mp3"
     ]
 }

@@ -5,7 +5,7 @@ function setup() {
     }
     terminateButton.onclick = function() {
         console.log("You've been terminated")
-        url = chrome.extension.getURL('terminatedsound.mp3');
+        url = chrome.extension.getURL('../res/terminatedsound.mp3');
         var audio = new Audio(url);
         audio.play();
     }
